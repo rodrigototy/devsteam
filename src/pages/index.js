@@ -21,9 +21,15 @@ export default function Home() {
           <div className={styles.session}>
             <Subtitle>Promoções</Subtitle>
             <div className={styles.saleContainer}>
-              <SaleCard />
-              <SaleCard />
-              <SaleCard />
+              <SaleCard saleImageSrc='/products/league-of-legends.jpg' saleImageAlt='League of Legends' saleImageWidth={250} saleImageHeight={300}
+                saleTitle='Oferta Exclusiva' saleDiscountPrice='-20%' salePrice='R$ 79,90' saleFullPrice='R$ 99,90' saleButton='Adicionar ao Carrinho'
+              />
+              <SaleCard saleImageSrc='/products/spider-man.jpg' saleImageAlt='Spider Man' saleImageWidth={250} saleImageHeight={300}
+                saleTitle='Oferta Exclusiva' saleDiscountPrice='-30%' salePrice='R$ 49,90' saleFullPrice='R$ 71,28' saleButton='Adicionar ao Carrinho'
+              />
+              <SaleCard saleImageSrc='/products/valorant.jpg' saleImageAlt='Valorant' saleImageWidth={250} saleImageHeight={300}
+                saleTitle='Oferta Exclusiva' saleDiscountPrice='-40%' salePrice='R$ 53,94' saleFullPrice='R$ 89,90' saleButton='Adicionar ao Carrinho'
+              />
             </div>
           </div>
           <div className={styles.gameContainer}>
