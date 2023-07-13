@@ -2,15 +2,15 @@ import Button from '@/componentes/forms/button/Button';
 import styles from './GameCard.module.css'
 import Image from 'next/image'
 
-function GameCard () {
+function GameCard ({saleImageSrc, saleImageAlt, saleImageWidth, saleImageHeight, saleTitle, saleCategory, saleFullPrice}) {
     return (
         <div className={styles.gameCard}>
-            <Image className={styles.image} src='/products/counter-strike.jpg' alt='Counter Strike' width={200} height={145} />
+            <Image className={styles.image} src={saleImageSrc} alt={saleImageAlt} width={200} height={145} />
             <div className={styles.info}>
-                <h3 className={styles.title}>Counter Strike: Global Offensive</h3>
-                <p className={styles.category}>Ação, estratégia, multijogador.</p>
+                <h3 className={styles.title}>{saleTitle}</h3>
+                <p className={styles.category}>{saleCategory}</p>
                 <div className={styles.pricing}>
-                    <h2>R$ 99,90</h2>
+                    <h2>{saleFullPrice}</h2>
                     <Button>Adicionar ao carrinho</Button>
                 </div>
             </div>
