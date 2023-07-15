@@ -24,26 +24,27 @@ export default function Home() {
               <SaleCard 
                 saleImageSrc='/products/league-of-legends.jpg'
                 saleImageAlt='League of Legends'
+                saleImagePriority={true}
                 saleTitle='Oferta Exclusiva'
-                saleDiscountPrice='-20%'
-                salePrice='R$ 79,90'
-                saleFullPrice='R$ 99,90'
+                saleDiscountPrice='25'
+                salePrice='79,90'
+                saleFullPrice='99,90'
               />
               <SaleCard
                 saleImageSrc='/products/dota-2.jpg'
                 saleImageAlt='Dota 2'
                 saleTitle='Oferta Exclusiva'
-                saleDiscountPrice='-30%'
-                salePrice='R$ 49,90'
-                saleFullPrice='R$ 71,28'
+                saleDiscountPrice='30'
+                salePrice='49,90'
+                saleFullPrice='71,28'
               />
               <SaleCard
                 saleImageSrc='/products/valorant.jpg'
                 saleImageAlt='Valorant'
                 saleTitle='Oferta Exclusiva'
-                saleDiscountPrice='-40%'
-                salePrice='R$ 53,94'
-                saleFullPrice='R$ 89,90'
+                saleDiscountPrice='40'
+                salePrice='53,94'
+                saleFullPrice='89,90'
               />
             </div>
           </div>
