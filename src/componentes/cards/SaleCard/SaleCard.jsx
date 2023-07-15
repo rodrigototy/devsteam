@@ -18,7 +18,7 @@ function calculateSalePrice(saleFullPrice, saleDiscountPrice) {
     return salePrice;
   }
 
-function SaleCard({saleImageSrc, saleImageAlt, saleImagePriority, saleTitle, saleFullPrice, saleDiscountPrice}) {
+function SaleCard({saleImageSrc, saleImageAlt, saleImagePriority, saleTitle, saleFullPrice, saleDiscountPrice, onAdd}) {
     // Chama a função calculateSalePrice para obter o preço de venda calculado
     let salePrice = calculateSalePrice(saleFullPrice, saleDiscountPrice);
 
@@ -40,7 +40,7 @@ function SaleCard({saleImageSrc, saleImageAlt, saleImagePriority, saleTitle, sal
                         <h4 className={styles.discountPrice}>R$ {salePrice}</h4>
                     </div>
                 </div>
-                <Button fullWidth={true}>Adicionar ao carrinho</Button>
+                <Button fullWidth={true} onClick={onAdd}>Adicionar ao carrinho</Button>
             </div>
         </div>
     )

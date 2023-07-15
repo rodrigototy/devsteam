@@ -3,16 +3,16 @@ import CartMenu from '@/componentes/cartMenu/CartMenu'
 import styles from './CartButton.module.css'
 import { BsCart4 } from 'react-icons/bs'
 
-function CartButton({ onClick }) {
-    const [cart, setCart] = useState(false)
+function CartButton({ cart, onRemove }) {
+    const [open, setOpen] = useState(false)
 
     return (
     <div>
         <BsCart4
             className={styles.cartIcon}
             size={40}
-            onClick={() =>setCart(!cart)} />
-        {cart &&< CartMenu />}
+            onClick={() =>setOpen(!open)} />
+        {open &&< CartMenu cart={cart} onRemove={onRemove} />}
     </div>
   )
 }
