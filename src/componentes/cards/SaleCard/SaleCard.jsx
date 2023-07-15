@@ -20,7 +20,7 @@ function calculateSalePrice(saleFullPrice, saleDiscountPrice) {
 
 function SaleCard({saleImageSrc, saleImageAlt, saleImagePriority, saleTitle, saleFullPrice, saleDiscountPrice}) {
     // Chama a função calculateSalePrice para obter o preço de venda calculado
-    var salePrice = calculateSalePrice(saleFullPrice, saleDiscountPrice);
+    let salePrice = calculateSalePrice(saleFullPrice, saleDiscountPrice);
 
     return (
         <div className={styles.saleCard}>
