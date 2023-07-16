@@ -27,8 +27,8 @@
 
 .vazio {
     text-align: center;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 24px;
+    
 }
 
 @media (max-width: 500px) {

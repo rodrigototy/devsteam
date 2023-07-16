@@ -25,12 +25,6 @@
     color: #BEEB14;
 }
 
-.vazio {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-}
-
 @media (max-width: 500px) {
     .menu {
         width: 300px;

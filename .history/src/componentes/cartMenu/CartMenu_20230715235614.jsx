@@ -10,7 +10,7 @@ function CartMenu() {
         <div className={styles.menu}>
             <div className={styles.options}>
                 {
-                    cart.length === 0 && <p className={styles.vazio}>Carrinho vazio</p>
+                    cart.length === 0 && <p>Carrinho vazio</p>
                 }
                 {
                     cart.map((cartInfo) => 
