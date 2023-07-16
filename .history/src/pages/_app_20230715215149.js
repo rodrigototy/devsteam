@@ -1,5 +1,4 @@
-//  src/pages/_app.js
-import { CartProvider } from '@/providers/CartContext';
+import { CartProvider } from '@/CartContext';
 import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 

@@ -8,9 +8,10 @@ import Subtitle from '@/componentes/typography/subtitle/Subtitle'
 import Container from '@/componentes/typography/container/container'
 import SaleCard from '@/componentes/cards/SaleCard/SaleCard'
 import GameCard from '@/componentes/cards/GameCard/GameCard'
+import { useState } from 'react'
 
 export default function Home() {
-  const { handleAddToCart } = useContext(CartContext);
+  const { cart, handleAddToCart } = useContext(CartContext);
   
   return (
     <>

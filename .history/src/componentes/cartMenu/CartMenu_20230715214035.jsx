@@ -1,6 +1,6 @@
 //  src/componentes/cartMenu/CartMenu.jsx
 import { useContext } from 'react';
-import { CartContext } from '@/providers/CartContext';
+import { CartContext } from '@/providersCartContext';
 import styles from './CartMenu.module.css'
 import CartOption from '@/componentes/cartOption/CartOption'
 
@@ -13,13 +13,13 @@ function CartMenu() {
                     cart.length === 0 && <p>Carrinho vazio</p>
                 }
                 {
-                    cart.map((cartInfo) => 
+                    cart.map((cartInfo, index) => 
                         <CartOption
                             image={cartInfo.image}
                             title={cartInfo.title}
                             price={cartInfo.price}
-                            onRemove={() => handleRemoveFromCart(cartInfo.id)}
-                            key={`cart-info-${cartInfo.id}`}
+                            onRemove={() => handleRemoveFromCart(index)}
+                            key={`cart-info-${index}`}
                         />
                     )
                 }

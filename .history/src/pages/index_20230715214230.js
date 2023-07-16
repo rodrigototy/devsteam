@@ -8,9 +8,11 @@ import Subtitle from '@/componentes/typography/subtitle/Subtitle'
 import Container from '@/componentes/typography/container/container'
 import SaleCard from '@/componentes/cards/SaleCard/SaleCard'
 import GameCard from '@/componentes/cards/GameCard/GameCard'
+import { useState } from 'react'
 
 export default function Home() {
-  const { handleAddToCart } = useContext(CartContext);
+  const { cart, handleAddToCart } = useContext(CartContext);
+  const [Cart, setCart]  = useState([])
   
   return (
     <>
@@ -21,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <NavBar />
+        <NavBar cart={Cart} onRemove={handleRemoveFromCart}/>
         <Container>
           <div className={styles.session}>
             <Subtitle>Promoções</Subtitle>

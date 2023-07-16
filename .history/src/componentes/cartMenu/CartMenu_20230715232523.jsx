@@ -13,12 +13,12 @@ function CartMenu() {
                     cart.length === 0 && <p>Carrinho vazio</p>
                 }
                 {
-                    cart.map((cartInfo) => 
+                    cart.map((cartInfo, index) => 
                         <CartOption
                             image={cartInfo.image}
                             title={cartInfo.title}
                             price={cartInfo.price}
-                            onRemove={() => handleRemoveFromCart(cartInfo.id)}
+                            onRemove={() => handleRemoveFromCart(index)}
                             key={`cart-info-${cartInfo.id}`}
                         />
                     )

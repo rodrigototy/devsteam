@@ -1,6 +1,3 @@
-//  src/pages/index.js
-import { useContext } from 'react';
-import { CartContext } from '@/providers/CartContext';
 import Head from 'next/head'
 import styles from '@/styles/index.module.css'
 import NavBar from '@/componentes/navbar/NavBar'
@@ -8,9 +5,18 @@ import Subtitle from '@/componentes/typography/subtitle/Subtitle'
 import Container from '@/componentes/typography/container/container'
 import SaleCard from '@/componentes/cards/SaleCard/SaleCard'
 import GameCard from '@/componentes/cards/GameCard/GameCard'
+import { useState } from 'react'
 
 export default function Home() {
-  const { handleAddToCart } = useContext(CartContext);
+  const [Cart, setCart]  = useState([])
+
+  const handleAddToCart = (game) => { 
+    setCart([...Cart, game])
+  }
+
+  const handleRemoveFromCart = (pos) => {
+    setCart(Cart.filter((obj, posObj) => posObj !== pos))
+  }
   
   return (
     <>
@@ -21,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <NavBar />
+        <NavBar cart={Cart} onRemove={handleRemoveFromCart}/>
         <Container>
           <div className={styles.session}>
             <Subtitle>Promoções</Subtitle>
@@ -56,6 +62,7 @@ export default function Home() {
                 saleImageAlt='Valorant'
                 saleTitle='Oferta Exclusiva'
                 saleDiscountPrice='40'
+                salePrice='53,94'
                 saleFullPrice='89,90'
                 onAdd={() => handleAddToCart({
                   title: 'Valorant',

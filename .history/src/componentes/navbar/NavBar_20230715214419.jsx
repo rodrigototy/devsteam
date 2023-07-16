@@ -1,4 +1,5 @@
 // src/componentes/navbar/NavBar.jsx
+
 import styles from './NavBar.module.css';
 import Logo from '@/componentes/logo/Logo';
 import Input from '@/componentes/forms/input/Input';
