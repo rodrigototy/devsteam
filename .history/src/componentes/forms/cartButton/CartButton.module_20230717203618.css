@@ -1,9 +1,8 @@
-.cartButton {
+.cartIcon {
     cursor: pointer;
-    position: relative;
 }
 
-.cartCounter {
+.quantity {
     position: absolute;
     top: 50%;
     right: 0;
@@ -12,6 +11,5 @@
     border-radius: 50%;
     width: 22px;
     height: 22px;
-    text-align: center;
-    font-size: 12px;
+    
 }

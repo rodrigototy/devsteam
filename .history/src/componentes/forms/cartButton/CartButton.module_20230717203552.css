@@ -1,0 +1,12 @@
+.cartIcon {
+    cursor: pointer;
+}
+
+.quantity {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-color: red;
+    padding: 5px;
+    bor
+}

@@ -1,9 +1,9 @@
-.cartButton {
+.cartIcon {
     cursor: pointer;
     position: relative;
 }
 
-.cartCounter {
+.quantity {
     position: absolute;
     top: 50%;
     right: 0;

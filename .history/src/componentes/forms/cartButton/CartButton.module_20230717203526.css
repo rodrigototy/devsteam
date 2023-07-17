@@ -1,0 +1,9 @@
+.cartIcon {
+    cursor: pointer;
+}
+
+.quantity {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}

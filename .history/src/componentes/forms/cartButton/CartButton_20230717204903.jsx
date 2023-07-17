@@ -1,6 +1,5 @@
 //  src/componentes/cartButton/CartButton.jsx
 import { useState, useContext } from 'react'
-import { BsCart4 } from 'react-icons/bs'
 
 import styles from './CartButton.module.css'
 
